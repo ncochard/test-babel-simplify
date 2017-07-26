@@ -1,0 +1,33 @@
+{
+    "env": {
+        "production": {
+            "presets": [
+                ["es2015"]
+            ],
+            "plugins": [
+                "minify-simplify",
+                [
+                    "module-alias",
+                    [
+                        { "src": "./src", "expose": "~" },
+                        { "src": "./test", "expose": "~test" }
+                    ]
+                ]
+            ]
+        },
+        "development": {
+            "presets": [
+                ["es2015"]
+            ],
+            "plugins": [
+                [
+                    "module-alias",
+                    [
+                        { "src": "./src", "expose": "~" },
+                        { "src": "./test", "expose": "~test" }
+                    ]
+                ]
+            ]
+        }
+    }
+}
